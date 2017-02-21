@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    <div class="home">
+        <h3>
+            Soirée des 20 ans de Sambagogo !
+        </h3>
+        <h5>Réservez vos billets en ligne</h5>
+        <p>Le 20 mai à partir de 18h à <a data-toggle="modal" data-target="#myModalLieu" href='#myModalLieus'>la Maison du Peuple</a> à Clermont-Ferrand</p>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class="text-center">
+        <a href="{{ path('billetterie') }}" class="btn btn-default btn-lg">Billetterie</a>
+    </div>
+    <div class="text-center">
+        <div class="text-center stripe">
+            <a href="http://sambagogo2015.wixsite.com/sambagogo" target="_blank"><img id="logo-stripe" src="{{ asset('assets/img/sambagogo.png') }}" alt="logo-sambagogo"></a>
+            <p>Paiement sécurisé</p>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="home">
+        <h3>
+            Soirée des 20 ans de Sambagogo !
+        </h3>
+        <h5>Réservez vos billets en ligne</h5>
+        <p>Le 20 mai à partir de 18h à la Maison du Peuple à Clermont-Ferrand</p>
+        
+        <p>Tarif plein : 8€</p>
+        <p>Tarif réduit (étudiants, chômeurs, sur justificatifs)</p>
+</div>
+
+    <div class="row">
+        
+        <div class="row">
+            
+            <div class="col-xs-8 col-xs-offset-2">
+                
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+                
+                <div class="form-group">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                    {{ form_errors(form.email) }}
+                </div>
+                <span id="places"></span>
+                <div class="text-center">
+                    <div class="alert alert-danger {{ error ? '' : 'hidden' }}">{{ error }}</div>
+                    </div>
+                <div class="text-center">
+                    {{ form_widget(form.Valider, {'attr': {'class': 'btn btn-default'}}) }}
+                </div>
+                {{ form_rest(form) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+    
+     <div class="text-center">
+        <div class="text-center stripe">
+            <a href="https://stripe.com/fr" target="_blank"><img id="logo-stripe" src="{{ asset('assets/img/stripe.png') }}" alt="logo-sambagogo"></a>
+            <p>Paiement sécurisé</p>
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('apple-touch-icon.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}" />
+
+    <title>{% block title %}20 ans de Sambagogo{% endblock %}</title>
+    {% block stylesheets %}
+        <!--     Fonts and icons     -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/material-bootstrap-wizard.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker2.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+{% block nav %}
+<header class="navbar navbar-inverse navbar-fixed-top navbar-fluid">
+    <div class="container-fluid text-center">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                     <a class="navbar-brand" href="#">SAMBAGOGO</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                	 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path('index') }}">ACCUEIL</a></li>
+                        <li><a data-toggle="modal" data-target="#myModalAffiche" href="#myModalAffiche">AFFICHE</i></a></li>
+                        <li><a data-toggle="modal" data-target="#myModalProgramme" href="#myModalProgramme">PROGRAMME</i></a></li>
+                        <li><a data-toggle="modal" data-target="#myModalHoraires" href="#myModalHoraires">HORAIRES</i></a></li>
+                        <li><a data-toggle="modal" data-target="#myModalLieu" href="#myModalLieu">LIEU</i></a></li>
+                        <li><a data-toggle="modal" data-target="#myModalTarifs" href="#myModalTarifs">TARIFS</i></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+    </div> 
+</header>
+{% endblock %}
+{% for msg in app.session.flashBag.get('success') %}
+    <div class="alert alert-success text-center alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{ msg }}
+    </div>
+{% endfor %}
+
+{% for msg in app.session.flashBag.get('error') %}
+    <div class="alert alert-danger">{{ msg }}</div>
+{% endfor %}
+
+    <div class="image-container set-full-height" style="background-image: url({{ asset('assets/img/sambaphoto.jpg') }})">
+    
+        <div>
+            <br>
+        </div>
+
+    <!--   Big container   -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="jumbotron">
+                    <div class="container text-center">
+                        <div>
+                            {% block header %}
+                            <h3>
+                                Réservation
+                            </h3>
+                            {% endblock %}
+                        </div>
+                    </div>
+                    <div class="container">
+                    {% block body %}{% endblock %}
+                    </div>
+                </div> <!-- wizard container -->
+            </div>
+        </div> <!-- row -->
+    </div> <!--  big container -->
+    <div class="footer">
+        <div class="container text-center">
+            © 2016 – LagunaWeb
+        </div>
+    </div>
+</div>
+                    
+    <!-- MODAL FOR HORAIRES -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModalHoraires" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center" id="myModalLabel">HORAIRES</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Ouverture de 18h, jusqu'à 1h30</p>
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+               
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
+
+ <!-- MODAL FOR TARIF -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModalTarifs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+                
+                 <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center" id="myModalLabel">TARIFS</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Tarif plein : 8€</p>
+                    <p>Tarif réduit (étudiant, chômeur) : 4€</p>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+                
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
+
+
+<!-- MODAL FOR LIEU -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModalLieu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+                
+                 <div class="modal-header">
+                    <h4 class="text-center">EMPLACEMENT</h4>
+                </div>
+                <div id="mapwrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1391.293646465855!2d3.0764695629977323!3d45.77946068468539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f71bdb9f34f183%3A0x305de7b9014be9d1!2sMaison+du+Peuple!5e0!3m2!1sfr!2sfr!4v1487342317190" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+           
+                
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
+
+
+<!-- MODAL FOR AFFICHE -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModalAffiche" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center" id="myModalLabel">AFFICHE</h4>
+                </div>
+                <div class="modal-body">
+                    <img src={{ asset('assets/img/affiche.png') }} class="img-responsive" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+	  </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->                       
+
+
+ <!-- MODAL FOR PROGRAMME -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModalProgramme" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center" id="myModalLabel">18h - Portela</h4>
+                </div>
+                <div class="modal-body text-center">
+                   
+                    <img src={{ asset('assets/img/portela.jpg') }} class="img-responsive center-block" alt="" width="304" height="236">>
+                </div>
+                  
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center" id="myModalLabel">20h - Sambagogo</h4>
+                </div>
+                <div class="modal-body text-center">
+                   
+                    <img src={{ asset('assets/img/sambagogo.png') }} class="img-responsive center-block" alt="" width="304" height="236">>
+                  
+                </div>
+                
+                 <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center" id="myModalLabel">20h - Arrête J'Adore</h4>
+                </div>
+                <div class="modal-body text-center">
+                   
+                    <img src={{ asset('assets/img/aj.png') }} class="img-responsive center-block" alt="" width="304" height="236">>
+                  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+                    
+                    
+                    
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-2.2.4.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.bootstrap.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.validate.js') }}"></script>
+<script src="{{ asset('assets/js/material-bootstrap-wizard.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap-datepicker2.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap-datepicker.fr.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>

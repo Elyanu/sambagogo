@@ -1,0 +1,22 @@
+<!DOCTYPE html>                                                             
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <img src="https://upload.wikimedia.org/wikipedia/fr/9/9f/Musee_du_Louvre_1992_logo.png" width="300"  alt='Logo'/>
+        <br/><br/>
+        <h2>Nous vous remercions pour votre commande</h2>
+        <h3>Récapitulatif de votre réservation :</h3>
+        <p>Réservation n° : <strong>{{ 'MLO_' ~ commande.token }}</strong></p>
+        <p>Pour le : <strong> 20 Mai 2017</strong></p>
+        <h3>Visiteurs&nbsp;:</h3>
+        {% for billet in billets %}
+        <p>{{ billet.prenom }} {{ billet.nomf }} ({{ billet.age }} ans) – Tarif&nbsp;: {{ billet.prix|number_format }} €</p>
+        {% endfor %}
+        <p>Merci d'imprimer ce billet et de le présenter le jour de votre visite, munis de vos justificatifs en cas de tarifs réduits</p>
+        <p>Cordialement,</p>
+        <p>Le service Réservation</p>
+    </body>
+</html>
+

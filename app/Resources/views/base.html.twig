@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Yann" >
+    <title>Sambagogo a 20 ans ! </title>
+    
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker2.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
+	 <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+	 <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">	
+	 <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->  
+         
+    <link rel="shortcut icon" href="{{ asset('assets/img/ico.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/img/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/img/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/img/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/img/ico/apple-touch-icon-57-precomposed.png') }}">
+</head>
+
+<body>
+	<header id="header" role="banner">		
+		<div class="main-nav">
+			<div class="container">
+				<div class="header-top">
+					<div class="pull-right social-icons">
+						<a href="https://www.facebook.com/Sambagogo-100713033333991/?fref=ts"><i class="fa fa-facebook"></i></a>
+						<a href="https://www.youtube.com/user/sambagogo"><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>     
+		        <div class="row">	        		
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <div class="navbar-brand">
+		               <img class="img-responsive" src="{{ asset('assets/img/sambagogoj.png') }}" alt="slider" height="87px">
+		                </div>                    
+		            </div>
+		            <div class="collapse navbar-collapse">
+		                <ul class="nav navbar-nav navbar-right">                 
+		                    <li class="scroll active"><a href="#home">Accueil</a></li>
+		                    <li class="scroll"><a href="#explore">Date</a></li>                         
+		                    <li class="scroll"><a href="#event">Programme</a></li>
+		                    <li class="scroll"><a href="#about">A Propos</a></li>                     
+		                    <li class="scroll"><a href="#contact">Contact</a></li>       
+		                </ul>
+		            </div>
+		        </div>
+	        </div>
+        </div>                    
+    </header>
+    
+
+    <section id="home">	
+		<div id="main-slider" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true">
+			<ol class="carousel-indicators">
+				<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#main-slider" data-slide-to="1"></li>
+				<li data-target="#main-slider" data-slide-to="2"></li>
+				<li data-target="#main-slider" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img class="img-responsive" src="{{ asset('assets/img/slider/pouet.jpg') }}" alt="slider">						
+					<div class="carousel-caption">
+						<h2>Sambagogo fête ses 20 ans !</h2>
+						<h4>Maison du Peuple à Clermont-Ferrand</h4>
+						<h4>Samedi 20 Mai 2017 à 18h00</h4>
+						<button type="button" class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#tickets">
+           Billetterie
+        </button>
+					</div>
+				</div>
+				<div class="item">
+					<img class="img-responsive" src="{{ asset('assets/img/slider/bg1.jpg') }}" alt="slider">	
+					<div class="carousel-caption">
+						<h2>Sambagogo fête ses 20 ans !</h2>
+						<h4>Maison du Peuple à Clermont-Ferrand</h4>
+						<h4>Samedi 20 Mai 2017 à 18h00</h4>
+						<button type="button" class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#tickets">
+           Billetterie
+        </button>
+					</div>
+				</div>
+				<div class="item">
+					<img class="img-responsive" src="{{ asset('assets/img/slider/bg2.jpg') }}" alt="slider">	
+					<div class="carousel-caption">
+						<h2>Sambagogo fête ses 20 ans !</h2>
+						<h4>Maison du Peuple à Clermont-Ferrand</h4>
+						<h4>Samedi 20 Mai 2017 à 18h00</h4>
+						<button type="button" class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#tickets">
+           Billetterie
+        </button>
+					</div>
+				</div>
+				
+				<div class="item">
+					<img class="img-responsive" src="{{ asset('assets/img/slider/bg3.jpg') }}" alt="slider">	
+					<div class="carousel-caption">
+						<h2>Sambagogo fête ses 20 ans !</h2>
+						<h4>Maison du Peuple à Clermont-Ferrand</h4>
+						<h4>Samedi 20 Mai 2017 à 18h00</h4>
+						<button type="button" class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#tickets">
+           Billetterie
+        </button>
+					</div>
+				</div>				
+			</div>
+		</div>    	
+    </section>
+	
+
+	<section id="explore" style="background-image: url({{ asset('assets/img/event-bg.jpg') }}) ">
+		<div class="container">
+			<div class="row">
+				<div class="watch">
+					<img class="img-responsive" src="{{ asset('assets/img/watch.png') }}" alt="">
+				</div>				
+				<div class="col-md-4 col-md-offset-2 col-sm-5">
+					<h2><strong>Le 20 Mai 2017 à 18h </strong></h2>
+					
+				</div>				
+				<div class="col-sm-7 col-md-6">					
+					<ul id="countdown">
+						<li>					
+							<span class="days time-font">00</span>
+							<p><strong>jours</strong></p>
+						</li>
+						<li>
+							<span class="hours time-font">00</span>
+							<p class=""><strong>heures</strong></p>
+						</li>
+						<li>
+							<span class="minutes time-font">00</span>
+							<p class=""><strong>min</strong></p>
+						</li>
+						<li>
+							<span class="seconds time-font">00</span>
+							<p class=""><strong>sec</strong></p>
+						</li>				
+					</ul>
+				</div>
+			</div>
+			<div class="cart">
+				<a href="#tickets"><i class="fa fa-shopping-cart" data-toggle="modal" data-target="#tickets"></i> <span>Prévente</span></a>
+			</div>
+		</div>
+	</section>
+
+	<section id="event" style="background-image: url({{ asset('assets/img/performar-bg.jpg') }}) ">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-9">
+					<div id="event-carousel" class="carousel slide" data-interval="false">
+						<h2 class="heading">Programme de la soirée</h2>
+						<a class="even-control-left" href="#event-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+						<a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{{ asset('assets/img/event/event1.jpg') }}" alt="event-image">
+											<h4>Portela</h4>
+											<h5>Roda de Samba</h5>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{{ asset('assets/img/event/event2.jpg') }}" alt="event-image">
+											<h4>Sambagogo</h4>
+											<h5>Batucada</h5>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{{ asset('assets/img/event/event3.jpg') }}" alt="event-image">
+											<h4>Arrête J'Adore</h4>
+											<h5>Roda de Samba / Batucada</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{{ asset('assets/img/event/event1.jpg') }}" alt="event-image">
+											<h4>Portela</h4>
+											<h5>Roda de Samba</h5>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{{ asset('assets/img/event/event2.jpg') }}" alt="event-image">
+											<h4>Sambagogo</h4>
+											<h5>Batucada</h5>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{{ asset('assets/img/event/event3.jpg') }}" alt="event-image">
+											<h4>Arrête J'Adore</h4>
+											<h5>Roda de Samba / Batucada</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="guitar">
+					<img class="img-responsive" src="{{ asset('assets/img/surdo1.png') }}" alt="surdo">
+				</div>
+			</div>			
+		</div>
+	</section>
+
+	<section id="about" style="background-image: url({{ asset('assets/img/about-bg.jpg') }}) ">
+		<div class="guitar2">				
+			<img class="img-responsive" src="{{ asset('assets/img/affiche.png') }}" alt="guitar">
+		</div>
+		<div class="about-content">					
+					<h2>A propos</h2>
+					<p>Sambagogo fête les 20 ans de sa création ! "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					<a href="https://www.facebook.com/Sambagogo-100713033333991/?fref=ts" class="btn btn-primary">Rejoignez-nous sur Facebook <i class="fa fa-angle-right"></i></a>
+					
+				
+		</div>
+		
+
+	</section>
+	
+	<section id="map">
+	
+			<div id="gmap-wrap">
+	 			<div id="gmap">
+	 			   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1391.293646465855!2d3.0764695629977323!3d45.77946068468539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f71bdb9f34f183%3A0x305de7b9014be9d1!2sMaison+du+Peuple!5e0!3m2!1sfr!2sfr!4v1487342317190" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>					
+	 			</div>	 			
+	    	</div>
+		
+	</section>	
+	
+	
+	
+	
+
+	<section id="contact" style="background-image: url({{ asset('assets/img/about-bg.jpg') }})">
+		
+		<div class="contact-section">
+			<div class="ear-piece">
+				<img class="img-responsive" src="{{ asset('assets/img/logo_sambagogo.gif') }}" alt="" width="500px" height="500px">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-sm-offset-4">
+						<div class="contact-text">
+							<h3>Contact</h3>
+							<address>
+								<br>
+								Association Sambagogo<br>
+								Cruzeiro do Sul<br><br>
+								44 avenue Léon Blum<br>
+								63000 Clermont-Ferrand<br><br>
+								
+								E-mail: contact@sambagogo.fr<br>
+								Téléphone: 06.99.23.05.75<br>
+							</address>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div id="contact-section">
+							<h3>Contactez-nous !</h3>
+					    	<div class="status alert alert-success" style="display: none"></div>
+					    	<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+					            <div class="form-group">
+					                <input type="text" name="name" class="form-control" required="required" placeholder="Nom">
+					            </div>
+					            <div class="form-group">
+					                <input type="email" name="email" class="form-control" required="required" placeholder="E-mail">
+					            </div>
+					            <div class="form-group">
+					                <textarea name="message" id="message" required="required" class="form-control" rows="4" placeholder="Votre message"></textarea>
+					            </div>                        
+					            <div class="form-group">
+					                <button type="submit" class="btn btn-primary pull-right">Envoyer</button>
+					            </div>
+					        </form>	       
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+	
+    <!-- Modal horaires -->
+    <div class="modal fade" id="tickets" tabindex="-1" role="dialog" aria-labelledby="myModalTickets">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="wizard-title text-center" id="myModalLabel">Prévente</h4>
+                </div>
+                <div class="modal-body text-center">
+                
+                
+                    {% block body %}{% endblock %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" style="background-image: url({{ asset('assets/img/footer-bg.jpg') }}) ">
+        <div class="container">
+            <div class="text-center">
+                <p> Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>                
+            </div>
+        </div>
+    </footer>
+   
+  
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/http://maps.google.com/maps/api/js?sensor=true') }}"></script>
+  	<!-- <script type="text/javascript" src="{{ asset('assets/js/gmaps.js') }}"></script> -->
+	<script type="text/javascript" src="{{ asset('assets/js/smoothscroll.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.parallax.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/coundown-timer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.scrollTo.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.nav.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>  
+</body>
+</html>
